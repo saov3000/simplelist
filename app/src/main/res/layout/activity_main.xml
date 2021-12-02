@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo01c"
+        android:layout_margin="16dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="6dp">
+
+        <EditText
+            android:id="@+id/idNomeProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_margin="0dp"
+            android:layout_weight="7"
+            android:hint="product"
+            android:backgroundTint="@color/black"/>
+
+        <ImageButton
+            android:id="@+id/idBtnAdd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:layout_margin="0dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_add_foreground" />
+
+        <ImageButton
+            android:id="@+id/idBtnVoice"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:layout_margin="0dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_voice_foreground" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/idFabSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/ic_save_background"
+                android:backgroundTintMode="add"
+                android:elevation="8dp"
+                android:foreground="@drawable/ic_save_foreground"
+                android:foregroundTint="@color/white"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_save02_foreground"
+                android:tint="@color/white"
+                app:backgroundTint="@color/ic_add_background"
+                app:fabSize="mini"
+                app:maxImageSize="50dp"
+                app:rippleColor="@color/white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/iidFabDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/ic_delete_background"
+                android:backgroundTintMode="add"
+                android:elevation="8dp"
+                android:foreground="@drawable/ic_delete_foreground"
+                android:foregroundTint="@color/white"
+                android:src="@drawable/ic_delete_foreground"
+                android:tint="@color/white"
+                app:backgroundTint="@color/ic_add_background"
+                app:fabSize="mini"
+                app:rippleColor="@color/ic_add_background" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
